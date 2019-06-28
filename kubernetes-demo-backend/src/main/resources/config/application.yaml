@@ -1,0 +1,33 @@
+# SPRING SETTINGS
+spring:
+  application:
+    name: "kubernetes-demo-backend"
+  main:
+    banner-mode: "off"
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: local
+
+# ENDPOINTS
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    git:
+      mode: full
+
+# SERVER
+server:
+  port: 8092
